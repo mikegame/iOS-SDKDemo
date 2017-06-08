@@ -1,0 +1,6 @@
+framework module MKSDK {
+  umbrella header "MKSDK.h"
+
+  export *
+  module * { export * }
+}
