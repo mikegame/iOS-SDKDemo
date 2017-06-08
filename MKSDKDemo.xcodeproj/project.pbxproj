@@ -14,7 +14,6 @@
 		14DE3BAA1EE94CF200E058FC /* MKSDK.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14DE3BA81EE94CF200E058FC /* MKSDK.xcassets */; };
 		14DE3BAC1EE94D0E00E058FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14DE3BAB1EE94D0E00E058FC /* Assets.xcassets */; };
 		14DE3BAE1EE94D1600E058FC /* MKSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14DE3BA71EE94CF200E058FC /* MKSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		14DE3BB31EE94EAA00E058FC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14DE3BB21EE94EAA00E058FC /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -167,7 +166,6 @@
 			files = (
 				14DE3BAA1EE94CF200E058FC /* MKSDK.xcassets in Resources */,
 				14DE3BAC1EE94D0E00E058FC /* Assets.xcassets in Resources */,
-				14DE3BB31EE94EAA00E058FC /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
