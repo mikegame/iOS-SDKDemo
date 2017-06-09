@@ -99,7 +99,7 @@
     [order setRoleName:@"凯特琳"];
     [order setProductName:@"未来战士"];
     [order setProductDescription:@"凯特琳皮肤"];
-    [order setCoOrderId:[self getOrderStringByTime]];
+    [order setCpOrderId:[self getOrderStringByTime]];
     [order setCustomInfo:@"好戏开场了，想看帽子戏法吗"];
     [order setProductId:@"com.mk.mksdkdemo.1"];
     [[MKSDK sharedXSSDK] mkPay:order];

@@ -18,7 +18,7 @@
 /**
  *  订单号
  */
-@property (nonatomic, strong) NSString *coOrderId;
+@property (nonatomic, strong) NSString *cpOrderId;
 
 /**
  *  服务器Id
