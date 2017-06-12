@@ -76,6 +76,14 @@
         NSLog(@"注销事件的回调");
     }];
     
+    [[MKSDK sharedXSSDK] setCreateOrderBlock:^(MKPayCode payCode) {
+        NSLog(@"IAP支付回调 - %ld", payCode);
+    }];
+    
+    [[MKSDK sharedXSSDK] setPayViewCloseBlock:^{
+        NSLog(@"支付页面关闭的回调");
+    }];
+    
     [[MKSDK sharedXSSDK] setLoginSuccessBlock:^(MKUser *user) {
         NSString *userId    = user.userId;
         NSString *userName  = user.username;

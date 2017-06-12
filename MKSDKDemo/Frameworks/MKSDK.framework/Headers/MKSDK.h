@@ -18,9 +18,20 @@ FOUNDATION_EXPORT const unsigned char MKSDKVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <MKSDK/PublicHeader.h>
 
+typedef NS_ENUM(NSInteger, MKPayCode) {
+    MKPayCreateOrderFail      = 1,    //创建订单失败
+    MKPayDoesNotExistProduct  = 2,    //商品信息不存在
+    MKPayUnknowFail           = 3,    //未知错误
+    MKPayVerifyReceiptSucceed = 4,    //支付验证成功
+    MKPayVerifyReceiptFail    = 5,    //支付验证失败
+    MKPayURLFail              = 6     //未能连接苹果商店
+};
+
+
 typedef void (^loginSuccessBlock)(MKUser *user);
 typedef void (^logoutBlock)();
-
+typedef void (^payViewCloseBlock)();
+typedef void (^createOrderBlock)(MKPayCode payCode);
 
 @interface MKSDK : NSObject
 
@@ -45,7 +56,8 @@ typedef void (^logoutBlock)();
 @property (nonatomic, strong, readonly) MKUser *currUser;
 @property (nonatomic, copy) loginSuccessBlock loginSuccessBlock;
 @property (nonatomic, copy) logoutBlock logoutBlock;
-
+@property (nonatomic, copy) payViewCloseBlock payViewCloseBlock;
+@property (nonatomic, copy) createOrderBlock createOrderBlock;
 /**
  *  获取XSSDK单例
  *
@@ -85,6 +97,10 @@ typedef void (^logoutBlock)();
  */
 - (void)mkLogout;
 
+/**
+ *  用户中心
+ */
+- (void)mkCenter;
 
 /**
  *  注销事件回调
@@ -92,7 +108,19 @@ typedef void (^logoutBlock)();
 - (void)setLogoutBlock:(logoutBlock)logoutBlock;
 
 
-- (void)mkCenter;
-
+/**
+ *  登陆成功回调
+ */
 - (void)setLoginSuccessBlock:(loginSuccessBlock)loginSuccessBlock;
+
+/**
+ *  支付页面关闭回调
+ */
+- (void)setPayViewCloseBlock:(payViewCloseBlock)payViewCloseBlock;
+
+
+/**
+ *  AIP支付回调
+ */
+- (void)setCreateOrderBlock:(createOrderBlock)createOrderBlock;
 @end
