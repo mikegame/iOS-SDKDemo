@@ -88,7 +88,19 @@
 ```
 
 
+#### 用户关闭支付页面回调方法
+```objective-c
+[[MKSDK sharedXSSDK] setPayViewCloseBlock:^{
+    NSLog(@"支付页面关闭的回调");
+}];
+```
 
+#### IAP支付回调方法
+```objective-c
+[[MKSDK sharedXSSDK] setCreateOrderBlock:^(MKPayCode payCode) {
+    NSLog(@"IAP支付回调 - %ld", payCode);
+}];
+```
 
 
 系统要求
