@@ -6,17 +6,17 @@
 //  Copyright © 2017年 熙文 张. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MKViewController.H"
 #import <MKSDK/MKSDK.h>
 
 
-@interface ViewController ()
+@interface MKViewController ()
 {
     UIImageView *_bgImageView;
 }
 @end
 
-@implementation ViewController
+@implementation MKViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

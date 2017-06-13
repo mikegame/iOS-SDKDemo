@@ -6,20 +6,20 @@
 //  Copyright © 2017年 熙文 张. All rights reserved.
 //
 
-#import "AppDelegate.h"
-#import "ViewController.h"
+#import "MKAppDelegate.h"
+#import "MKViewController.h"
 #import <MKSDK/MKSDK.h>
-@interface AppDelegate ()
+@interface MKAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation MKAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window setBackgroundColor:[UIColor whiteColor]];
-    ViewController *viewController = [ViewController new];
+    MKViewController *viewController = [MKViewController new];
     [self.window setRootViewController:viewController];
     [self.window makeKeyAndVisible];
     [[MKSDK sharedXSSDK] mkInitWithSDKParameters:1 subGameId:1 secretKey:@"4f76c696869efaa7f84afe5a2d0de332"];
