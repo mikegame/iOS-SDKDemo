@@ -88,9 +88,9 @@
         NSString *userId    = user.userId;
         NSString *userName  = user.username;
         NSString *accessToken = user.accessToken;
-        NSLog(@"userId    -- %@", userId);
-        NSLog(@"userName  -- %@", userName);
-        NSLog(@"accessToken     -- %@", accessToken);
+        NSLog(@"userId      -- %@", userId);
+        NSLog(@"userName    -- %@", userName);
+        NSLog(@"accessToken -- %@", accessToken);
     }];
     
     
