@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MKOrder.h"
 #import "MKUser.h"
+#import "MKRole.h"
 
 //! Project version number for MKSDK.
 FOUNDATION_EXPORT double MKSDKVersionNumber;
@@ -27,8 +28,13 @@ typedef NS_ENUM(NSInteger, MKPayCode) {
     MKPayURLFail              = 6     //未能连接苹果商店
 };
 
+typedef NS_ENUM(NSInteger, MKLoginSuccessSource) {
+    MKLoginSuccessByLogin      = 1,    //登陆成功
+    MKLoginSuccessByRegister   = 2,    //注册成功
+};
 
-typedef void (^loginSuccessBlock)(MKUser *user);
+
+typedef void (^loginSuccessBlock)(MKUser *user, MKLoginSuccessSource loginSuccessSource);
 typedef void (^logoutBlock)();
 typedef void (^payViewCloseBlock)();
 typedef void (^createOrderBlock)(MKPayCode payCode);
@@ -101,6 +107,11 @@ typedef void (^createOrderBlock)(MKPayCode payCode);
  *  用户中心
  */
 - (void)mkCenter;
+
+/**
+ *  上报角色
+ */
+- (void)mkReportRole:(MKRole *)role;
 
 /**
  *  注销事件回调

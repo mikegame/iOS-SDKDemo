@@ -84,13 +84,38 @@
         NSLog(@"支付页面关闭的回调");
     }];
     
-    [[MKSDK sharedXSSDK] setLoginSuccessBlock:^(MKUser *user) {
+    [[MKSDK sharedXSSDK] setLoginSuccessBlock:^(MKUser *user, MKLoginSuccessSource loginSuccessSource) {
         NSString *userId    = user.userId;
         NSString *userName  = user.username;
         NSString *accessToken = user.accessToken;
         NSLog(@"userId      -- %@", userId);
         NSLog(@"userName    -- %@", userName);
         NSLog(@"accessToken -- %@", accessToken);
+        if (loginSuccessSource == MKLoginSuccessByLogin) {
+            NSLog(@"登陆来源");
+        }
+        else if (loginSuccessSource == MKLoginSuccessByRegister)
+        {
+            NSLog(@"注册来源");
+        }
+        
+        NSDate *date = [NSDate date];
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateStyle:NSDateFormatterMediumStyle];
+        [formatter setTimeStyle:NSDateFormatterShortStyle];
+        [formatter setDateFormat:@"YYYY-MM-dd hh:mm:ss"];
+        NSString *dateTime = [formatter stringFromDate:date];
+        
+        
+        MKRole *role = [MKRole new];
+        [role setServerId:@"serverId1"];
+        [role setServerName:@"紫陌红尘"];
+        [role setRoleId:@"9527"];
+        [role setRoleName:@"凯特琳"];
+        [role setRoleLevel:1];
+        [role setLoginTime:dateTime];
+        [[MKSDK sharedXSSDK] mkReportRole:role];
+        
     }];
     
     
