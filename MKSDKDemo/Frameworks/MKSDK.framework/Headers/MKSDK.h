@@ -113,6 +113,12 @@ typedef void (^createOrderBlock)(MKPayCode payCode);
  */
 - (void)mkReportRole:(MKRole *)role;
 
+
+- (void)mkShowFloat;
+
+
+- (void)mkDissmissFloat;
+
 /**
  *  注销事件回调
  */
