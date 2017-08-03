@@ -37,6 +37,12 @@
 }
 ```
 
+#### 获取SDK版本号
+
+```objective-c
+[[MKSDK sharedXSSDK] mkSDKVersion];
+```
+
 #### 登陆方法
 
 ```objective-c
