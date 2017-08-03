@@ -22,7 +22,7 @@
     MKViewController *viewController = [MKViewController new];
     [self.window setRootViewController:viewController];
     [self.window makeKeyAndVisible];
-    [[MKSDK sharedXSSDK] mkInitWithSDKParameters:1 subGameId:1 secretKey:@"4f76c696869efaa7f84afe5a2d0de332"];
+//    [[MKSDK sharedXSSDK] mkInitWithSDKParameters:1 subGameId:1 secretKey:@"4f76c696869efaa7f84afe5a2d0de332"];
     return YES;
 }
 

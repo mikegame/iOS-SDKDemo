@@ -29,8 +29,8 @@ typedef NS_ENUM(NSInteger, MKPayCode) {
 };
 
 typedef NS_ENUM(NSInteger, MKLoginSuccessSource) {
-    MKLoginSuccessByLogin      = 1,    //登陆成功
-    MKLoginSuccessByRegister   = 2,    //注册成功
+    MKLoginSuccessByLogin      = 1,    //登陆成功来源
+    MKLoginSuccessByRegister   = 2,    //注册成功来源
 };
 
 
@@ -71,6 +71,10 @@ typedef void (^createOrderBlock)(MKPayCode payCode);
  */
 + (MKSDK *)sharedXSSDK;
 
+/**
+ *  获取SDK版本号 eg:1.0.0 三段
+ */
+- (NSString *)mkSDKVersion;
 
 
 /**
@@ -109,15 +113,12 @@ typedef void (^createOrderBlock)(MKPayCode payCode);
 - (void)mkCenter;
 
 /**
- *  上报角色
+ *  初始化SDK
+ *
+ *  @param role    游戏角色
  */
 - (void)mkReportRole:(MKRole *)role;
 
-
-- (void)mkShowFloat;
-
-
-- (void)mkDissmissFloat;
 
 /**
  *  注销事件回调
@@ -137,7 +138,12 @@ typedef void (^createOrderBlock)(MKPayCode payCode);
 
 
 /**
- *  AIP支付回调
+ *  IAP支付回调
  */
 - (void)setCreateOrderBlock:(createOrderBlock)createOrderBlock;
+
+- (void)mkShowFloat;
+
+
+- (void)mkDissmissFloat;
 @end
