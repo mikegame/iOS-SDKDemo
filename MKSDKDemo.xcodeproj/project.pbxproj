@@ -10,7 +10,7 @@
 		14016BF21EEFFD0F008B1E09 /* MKSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 146FD0F01EEA55F60092FD23 /* MKSDK.framework */; };
 		14016BF31EEFFD0F008B1E09 /* MKSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 146FD0F01EEA55F60092FD23 /* MKSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		14016BF61EF0026B008B1E09 /* MKSDK.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14016BF51EF0026B008B1E09 /* MKSDK.xcassets */; };
-		146FD0F61EEA55F60092FD23 /* MKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 146FD0ED1EEA55F60092FD23 /* MKAppDelegate.m */; };
+		146FD0F61EEA55F60092FD23 /* MKAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 146FD0ED1EEA55F60092FD23 /* MKAppDelegate.mm */; };
 		146FD0F71EEA55F60092FD23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 146FD0EE1EEA55F60092FD23 /* Assets.xcassets */; };
 		146FD0FB1EEA55F60092FD23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 146FD0F31EEA55F60092FD23 /* main.m */; };
 		146FD0FC1EEA55F60092FD23 /* MKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 146FD0F51EEA55F60092FD23 /* MKViewController.m */; };
@@ -33,8 +33,9 @@
 /* Begin PBXFileReference section */
 		14016BF51EF0026B008B1E09 /* MKSDK.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MKSDK.xcassets; sourceTree = "<group>"; };
 		142B44091EB03A77003EFFFC /* MKSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MKSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		146288AD1F398DF70088B948 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
 		146FD0EC1EEA55F60092FD23 /* MKAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKAppDelegate.h; sourceTree = "<group>"; };
-		146FD0ED1EEA55F60092FD23 /* MKAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKAppDelegate.m; sourceTree = "<group>"; };
+		146FD0ED1EEA55F60092FD23 /* MKAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MKAppDelegate.mm; sourceTree = "<group>"; };
 		146FD0EE1EEA55F60092FD23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		146FD0F01EEA55F60092FD23 /* MKSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MKSDK.framework; sourceTree = "<group>"; };
 		146FD0F21EEA55F60092FD23 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,6 +61,7 @@
 			children = (
 				146FD0EB1EEA55F60092FD23 /* MKSDKDemo */,
 				142B440A1EB03A77003EFFFC /* Products */,
+				146288AC1F398DF70088B948 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,11 +73,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		146288AC1F398DF70088B948 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				146288AD1F398DF70088B948 /* libc++abi.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		146FD0EB1EEA55F60092FD23 /* MKSDKDemo */ = {
 			isa = PBXGroup;
 			children = (
 				146FD0EC1EEA55F60092FD23 /* MKAppDelegate.h */,
-				146FD0ED1EEA55F60092FD23 /* MKAppDelegate.m */,
+				146FD0ED1EEA55F60092FD23 /* MKAppDelegate.mm */,
 				146FD0EE1EEA55F60092FD23 /* Assets.xcassets */,
 				146FD0EF1EEA55F60092FD23 /* Frameworks */,
 				146FD0F21EEA55F60092FD23 /* Info.plist */,
@@ -169,7 +179,7 @@
 			files = (
 				146FD0FC1EEA55F60092FD23 /* MKViewController.m in Sources */,
 				146FD0FB1EEA55F60092FD23 /* main.m in Sources */,
-				146FD0F61EEA55F60092FD23 /* MKAppDelegate.m in Sources */,
+				146FD0F61EEA55F60092FD23 /* MKAppDelegate.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
