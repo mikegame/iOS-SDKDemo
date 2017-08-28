@@ -6,7 +6,7 @@
 //  Copyright © 2017年 熙文 张. All rights reserved.
 //
 
-#import "MKViewController.H"
+#import "MKViewController.h"
 #import <MKSDK/MKSDK.h>
 
 
@@ -77,7 +77,7 @@
     }];
     
     [[MKSDK sharedXSSDK] setCreateOrderBlock:^(MKPayCode payCode) {
-        NSLog(@"IAP支付回调 - %ld", payCode);
+        NSLog(@"IAP支付回调 - %ld", (long)payCode);
     }];
     
     [[MKSDK sharedXSSDK] setPayViewCloseBlock:^{
