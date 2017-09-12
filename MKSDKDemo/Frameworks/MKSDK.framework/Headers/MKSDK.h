@@ -10,6 +10,7 @@
 #import "MKOrder.h"
 #import "MKUser.h"
 #import "MKRole.h"
+#import "MKGameImageViewController.h"
 
 //! Project version number for MKSDK.
 FOUNDATION_EXPORT double MKSDKVersionNumber;
@@ -83,9 +84,15 @@ typedef void (^createOrderBlock)(MKPayCode payCode);
  *  @param gameId    游戏编号
  *  @param subGameId 游戏子包
  *  @param secretKey 游戏密钥
+ *  @param oldTime 出包时间戳
+ *  @param webGameUrl 游戏链接
  */
-- (void)mkInitWithSDKParameters:(int)gameId subGameId:(int)subGameId secretKey:(NSString *)secretKey;
-
+- (void)mkInitWithSDKParameters:(int)gameId subGameId:(int)subGameId secretKey:(NSString *)secretKey
+                        oldTime:(long)oldTime
+                     webGameUrl:(NSString *)webGameUrl
+                   webGameImage:(NSString *)imageName
+                        success:(void (^)(BOOL isWebGame))successBlock
+                        failure:(void (^)(int errcode, NSString *errorMessage))errorBlock;
 
 /**
  *   用户登陆

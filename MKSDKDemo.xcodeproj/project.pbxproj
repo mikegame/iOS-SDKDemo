@@ -34,6 +34,14 @@
 		14016BF51EF0026B008B1E09 /* MKSDK.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MKSDK.xcassets; sourceTree = "<group>"; };
 		142B44091EB03A77003EFFFC /* MKSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MKSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		146288AD1F398DF70088B948 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
+		146811351F55582A00039C2A /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		146811371F55583600039C2A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		146811391F55583E00039C2A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		1468113B1F55584600039C2A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		1468113D1F55584E00039C2A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1468113F1F55585800039C2A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		146811411F55586400039C2A /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		146811431F55586900039C2A /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		146FD0EC1EEA55F60092FD23 /* MKAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKAppDelegate.h; sourceTree = "<group>"; };
 		146FD0ED1EEA55F60092FD23 /* MKAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MKAppDelegate.mm; sourceTree = "<group>"; };
 		146FD0EE1EEA55F60092FD23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,6 +84,14 @@
 		146288AC1F398DF70088B948 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				146811431F55586900039C2A /* AdSupport.framework */,
+				146811411F55586400039C2A /* CoreTelephony.framework */,
+				1468113F1F55585800039C2A /* AudioToolbox.framework */,
+				1468113D1F55584E00039C2A /* SystemConfiguration.framework */,
+				1468113B1F55584600039C2A /* Security.framework */,
+				146811391F55583E00039C2A /* OpenGLES.framework */,
+				146811371F55583600039C2A /* QuartzCore.framework */,
+				146811351F55582A00039C2A /* OpenAL.framework */,
 				146288AD1F398DF70088B948 /* libc++abi.tbd */,
 			);
 			name = Frameworks;

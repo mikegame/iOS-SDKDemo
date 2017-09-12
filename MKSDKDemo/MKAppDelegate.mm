@@ -9,6 +9,8 @@
 #import "MKAppDelegate.h"
 #import "MKViewController.h"
 #import <MKSDK/MKSDK.h>
+
+
 @interface MKAppDelegate ()
 
 @end
@@ -19,12 +21,41 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window setBackgroundColor:[UIColor whiteColor]];
-    MKViewController *viewController = [MKViewController new];
-    [self.window setRootViewController:viewController];
-    [self.window makeKeyAndVisible];
-    [[MKSDK sharedXSSDK] mkInitWithSDKParameters:1 subGameId:1 secretKey:@"4f76c696869efaa7f84afe5a2d0de332"];
+    NSString *imageName = @"111";
+    
+    [[MKSDK sharedXSSDK] mkInitWithSDKParameters:1 subGameId:1
+                                       secretKey:@"4f76c696869efaa7f84afe5a2d0de332"
+                                         oldTime:1505123978
+                                      webGameUrl:@"http://sda.4399.com/4399swf/upload_swf/ftp19/ssj/20160701/t3/index.html"
+                                    webGameImage:imageName
+                                         success:^(BOOL isWebGame) {
+                                             if (isWebGame) {
+                                                 NSLog(@"WebGame");
+                                                 UIImage *image = [UIImage imageNamed:imageName];
+                                                 if (image) {
+                                                     MKGameImageViewController *gameImageViewController = [MKGameImageViewController new];
+                                                     [self.window setRootViewController:gameImageViewController];
+                                                 }
+                                             }
+                                             else
+                                             {
+                                                 NSLog(@"NativeGame");
+                                                 MKViewController *viewController = [MKViewController new];
+                                                 [self.window setRootViewController:viewController];
+                                             }
+                                             [self.window makeKeyAndVisible];
+                                         } failure:^(int errcode, NSString *errorMessage) {
+                                             
+                                             
+                                         }];
     return YES;
 }
+
+//支持的方向 因为界面A我们只需要支持竖屏
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
