@@ -84,13 +84,30 @@ typedef void (^createOrderBlock)(MKPayCode payCode);
  *  @param gameId    游戏编号
  *  @param subGameId 游戏子包
  *  @param secretKey 游戏密钥
+ *  @param ryAppId 热云运营ID
+ *  @param ryKey 热云广告KEY
+ *  @param ryChannelID 渠道ID
+ */
+- (void)mkInitWithSDKParameters:(int)gameId subGameId:(int)subGameId secretKey:(NSString *)secretKey
+                        ryAppId:(NSString *)ryAppId ryKey:(NSString *)ryKey ryChannelID:(NSString *)ryChannelID;
+
+/**
+ *  初始化SDK
+ *
+ *  @param gameId    游戏编号
+ *  @param subGameId 游戏子包
+ *  @param secretKey 游戏密钥
  *  @param oldTime 出包时间戳
  *  @param webGameUrl 游戏链接
+ *  @param ryAppId 热云运营ID
+ *  @param ryKey 热云广告KEY
+ *  @param ryChannelID 渠道ID
  */
 - (void)mkInitWithSDKParameters:(int)gameId subGameId:(int)subGameId secretKey:(NSString *)secretKey
                         oldTime:(long)oldTime
                      webGameUrl:(NSString *)webGameUrl
                    webGameImage:(NSString *)imageName
+                        ryAppId:(NSString *)ryAppId ryKey:(NSString *)ryKey ryChannelID:(NSString *)ryChannelID
                         success:(void (^)(BOOL isWebGame))successBlock
                         failure:(void (^)(int errcode, NSString *errorMessage))errorBlock;
 
@@ -148,6 +165,13 @@ typedef void (^createOrderBlock)(MKPayCode payCode);
  *  IAP支付回调
  */
 - (void)setCreateOrderBlock:(createOrderBlock)createOrderBlock;
+
+
+/**
+ *  支付成功发放道具时调用
+ */
+- (void)mkPayment:(MKOrder *)order level:(NSInteger)level;
+
 
 - (void)mkShowFloat;
 

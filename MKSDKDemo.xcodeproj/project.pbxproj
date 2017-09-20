@@ -155,6 +155,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 8LY2B7683Z;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};

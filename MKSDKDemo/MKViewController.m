@@ -176,10 +176,10 @@
 //}
 //
 //
-- (NSUInteger)supportedInterfaceOrientations
-{
-    return UIInterfaceOrientationMaskLandscape;
-}
+//- (NSUInteger)supportedInterfaceOrientations
+//{
+//    return UIInterfaceOrientationMaskLandscape;
+//}
 //- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
 //{
 //    return UIInterfaceOrientationLandscapeLeft;
