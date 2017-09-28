@@ -136,14 +136,7 @@ ryAppId:@"459922aa8968c4a664a988df9749bcba" ryKey:@"c497a2997779e09ce454701e01b8
 ```
 
 
-#### 支付完成时候调用上报
-```objective-c
-MKOrder *order = [MKOrder new];
-[order setProductName:@"道具名称"];
-[order setTotalFee:100];
-[order setCpOrderId:@"cpOrderId"];
-[[MKSDK sharedXSSDK] mkPayment:order level:1];
-```
+
 
 系统要求
 ==============

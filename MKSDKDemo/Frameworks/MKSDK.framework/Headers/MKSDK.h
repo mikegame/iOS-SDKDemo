@@ -167,10 +167,6 @@ typedef void (^createOrderBlock)(MKPayCode payCode);
 - (void)setCreateOrderBlock:(createOrderBlock)createOrderBlock;
 
 
-/**
- *  支付成功发放道具时调用
- */
-- (void)mkPayment:(MKOrder *)order level:(NSInteger)level;
 
 
 - (void)mkShowFloat;
