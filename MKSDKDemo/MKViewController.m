@@ -127,7 +127,7 @@
 {
     MKOrder *order = [MKOrder new];
     [order setServerId:@"serverId1"];
-    [order setTotalFee:1];
+    [order setTotalFee:200];
     [order setRoleId:@"9527"];
     [order setRoleName:@"凯特琳"];
     [order setProductName:@"未来战士"];
