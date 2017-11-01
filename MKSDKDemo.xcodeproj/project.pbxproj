@@ -7,23 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14016BF21EEFFD0F008B1E09 /* MKSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 146FD0F01EEA55F60092FD23 /* MKSDK.framework */; };
-		14016BF31EEFFD0F008B1E09 /* MKSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 146FD0F01EEA55F60092FD23 /* MKSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		14016BF61EF0026B008B1E09 /* MKSDK.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14016BF51EF0026B008B1E09 /* MKSDK.xcassets */; };
 		146FD0F61EEA55F60092FD23 /* MKAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 146FD0ED1EEA55F60092FD23 /* MKAppDelegate.mm */; };
 		146FD0F71EEA55F60092FD23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 146FD0EE1EEA55F60092FD23 /* Assets.xcassets */; };
 		146FD0FB1EEA55F60092FD23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 146FD0F31EEA55F60092FD23 /* main.m */; };
 		146FD0FC1EEA55F60092FD23 /* MKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 146FD0F51EEA55F60092FD23 /* MKViewController.m */; };
+		14A883941FA9AB140037734C /* MKSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A883921FA9AB120037734C /* MKSDK.framework */; };
+		14A883951FA9AB140037734C /* MKSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14A883921FA9AB120037734C /* MKSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		14016BF41EEFFD0F008B1E09 /* Embed Frameworks */ = {
+		14A883961FA9AB140037734C /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				14016BF31EEFFD0F008B1E09 /* MKSDK.framework in Embed Frameworks */,
+				14A883951FA9AB140037734C /* MKSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -31,9 +30,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		14016BF51EF0026B008B1E09 /* MKSDK.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MKSDK.xcassets; sourceTree = "<group>"; };
 		142B44091EB03A77003EFFFC /* MKSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MKSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		146288AD1F398DF70088B948 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
 		146811351F55582A00039C2A /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		146811371F55583600039C2A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		146811391F55583E00039C2A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -45,11 +42,11 @@
 		146FD0EC1EEA55F60092FD23 /* MKAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKAppDelegate.h; sourceTree = "<group>"; };
 		146FD0ED1EEA55F60092FD23 /* MKAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MKAppDelegate.mm; sourceTree = "<group>"; };
 		146FD0EE1EEA55F60092FD23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		146FD0F01EEA55F60092FD23 /* MKSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MKSDK.framework; sourceTree = "<group>"; };
 		146FD0F21EEA55F60092FD23 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		146FD0F31EEA55F60092FD23 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		146FD0F41EEA55F60092FD23 /* MKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKViewController.h; sourceTree = "<group>"; };
 		146FD0F51EEA55F60092FD23 /* MKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKViewController.m; sourceTree = "<group>"; };
+		14A883921FA9AB120037734C /* MKSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MKSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14016BF21EEFFD0F008B1E09 /* MKSDK.framework in Frameworks */,
+				14A883941FA9AB140037734C /* MKSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +89,6 @@
 				146811391F55583E00039C2A /* OpenGLES.framework */,
 				146811371F55583600039C2A /* QuartzCore.framework */,
 				146811351F55582A00039C2A /* OpenAL.framework */,
-				146288AD1F398DF70088B948 /* libc++abi.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,8 +111,7 @@
 		146FD0EF1EEA55F60092FD23 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				14016BF51EF0026B008B1E09 /* MKSDK.xcassets */,
-				146FD0F01EEA55F60092FD23 /* MKSDK.framework */,
+				14A883921FA9AB120037734C /* MKSDK.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -131,7 +126,7 @@
 				142B44051EB03A77003EFFFC /* Sources */,
 				142B44061EB03A77003EFFFC /* Frameworks */,
 				142B44071EB03A77003EFFFC /* Resources */,
-				14016BF41EEFFD0F008B1E09 /* Embed Frameworks */,
+				14A883961FA9AB140037734C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -186,7 +181,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14016BF61EF0026B008B1E09 /* MKSDK.xcassets in Resources */,
 				146FD0F71EEA55F60092FD23 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,6 +319,11 @@
 				INFOPLIST_FILE = "$(SRCROOT)/MKSDKDemo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MKSDKDemo/Frameworks",
+				);
+				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mk.mksdkdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -348,6 +347,11 @@
 				INFOPLIST_FILE = "$(SRCROOT)/MKSDKDemo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MKSDKDemo/Frameworks",
+				);
+				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mk.mksdkdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
