@@ -68,7 +68,7 @@ typedef void (^createOrderBlock)(MKPayCode payCode);
 /**
  *  获取XSSDK单例
  *
- *  @return XSSDK单例对象
+ *  @return XS  SDK单例对象
  */
 + (MKSDK *)sharedXSSDK;
 

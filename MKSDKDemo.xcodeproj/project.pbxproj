@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		141565B51FBBE07600603192 /* MKSDK.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 141565B41FBBE07500603192 /* MKSDK.xcassets */; };
 		146FD0F61EEA55F60092FD23 /* MKAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 146FD0ED1EEA55F60092FD23 /* MKAppDelegate.mm */; };
 		146FD0F71EEA55F60092FD23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 146FD0EE1EEA55F60092FD23 /* Assets.xcassets */; };
 		146FD0FB1EEA55F60092FD23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 146FD0F31EEA55F60092FD23 /* main.m */; };
@@ -30,6 +31,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		141565B41FBBE07500603192 /* MKSDK.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = MKSDK.xcassets; path = MKSDKDemo/Frameworks/MKSDK.xcassets; sourceTree = "<group>"; };
 		142B44091EB03A77003EFFFC /* MKSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MKSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		146811351F55582A00039C2A /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		146811371F55583600039C2A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -64,6 +66,7 @@
 		142B44001EB03A77003EFFFC = {
 			isa = PBXGroup;
 			children = (
+				141565B41FBBE07500603192 /* MKSDK.xcassets */,
 				146FD0EB1EEA55F60092FD23 /* MKSDKDemo */,
 				142B440A1EB03A77003EFFFC /* Products */,
 				146288AC1F398DF70088B948 /* Frameworks */,
@@ -181,6 +184,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				141565B51FBBE07600603192 /* MKSDK.xcassets in Resources */,
 				146FD0F71EEA55F60092FD23 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
