@@ -20,9 +20,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    [self.window setBackgroundColor:[UIColor whiteColor]];
-    
     MKViewController *viewController = [MKViewController new];
+    [self.window setBackgroundColor:[UIColor whiteColor]];
     [self.window setRootViewController:viewController];
     [self.window makeKeyAndVisible];
     
@@ -33,7 +32,7 @@
                                              
                                          }];
     
-    
+
     
     //    NSString *imageName = @"111";    
     //    [[MKSDK sharedXSSDK] mkInitWithSDKParameters:1 subGameId:1
