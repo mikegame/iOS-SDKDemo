@@ -10,7 +10,7 @@
 #import "MKViewController.h"
 #import <MKSDK/MKSDK.h>
 
-
+#define WS(weakSelf) __weak __typeof(&*self) weakSelf = self;
 @interface MKAppDelegate ()
 
 @end
@@ -18,19 +18,27 @@
 @implementation MKAppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    MKViewController *viewController = [MKViewController new];
-    [self.window setBackgroundColor:[UIColor whiteColor]];
-    [self.window setRootViewController:viewController];
-    [self.window makeKeyAndVisible];
+- (void)initSDK
+{
     
     [[MKSDK sharedXSSDK] mkInitWithSDKParameters:1 subGameId:1 secretKey:@"4f76c696869efaa7f84afe5a2d0de332"
                                          ryAppId:@"459922aa8968c4a664a988df9749bcba" ryKey:@"c497a2997779e09ce454701e01b81a15" ryChannelID:@"unknown"
                                          success:^{
                                          } failure:^(int errcode, NSString *errorMessage) {
-                                             
+                                             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"初始化失败" delegate:self cancelButtonTitle:@"重试" otherButtonTitles:@"退出", nil];
+                                             [alertView show];
                                          }];
+    
+}
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    MKViewController *viewController = [MKViewController new];
+    [self.window setBackgroundColor:[UIColor whiteColor]];
+    [self.window setRootViewController:viewController];
+    [self.window makeKeyAndVisible];
+    [self initSDK];
     
 
     
@@ -65,6 +73,17 @@
     return YES;
 }
 
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0)
+    {
+        [self initSDK];
+    }
+    else if (buttonIndex == 1)
+    {
+        exit(0);
+    }
+}
 
 
 
