@@ -20,15 +20,17 @@
 
 - (void)initSDK
 {
-    
     [[MKSDK sharedXSSDK] mkInitWithSDKParameters:1 subGameId:1 secretKey:@"4f76c696869efaa7f84afe5a2d0de332"
                                          ryAppId:@"459922aa8968c4a664a988df9749bcba" ryKey:@"c497a2997779e09ce454701e01b81a15" ryChannelID:@"unknown"
                                          success:^{
                                          } failure:^(int errcode, NSString *errorMessage) {
-                                             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"初始化失败" delegate:self cancelButtonTitle:@"重试" otherButtonTitles:@"退出", nil];
-                                             [alertView show];
+                                             
+                                             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                                                 UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"初始化失败" delegate:self cancelButtonTitle:@"重试" otherButtonTitles:@"退出", nil];
+                                                 [alertView show];
+                                             });
+                                             
                                          }];
-    
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
