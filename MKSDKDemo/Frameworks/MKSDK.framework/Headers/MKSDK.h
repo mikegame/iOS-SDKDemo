@@ -83,12 +83,12 @@ typedef void (^createOrderBlock)(MKPayCode payCode);
  *
  *  @param gameId    游戏编号
  *  @param subGameId 游戏子包
- *  @param secretKey 游戏密钥
+ *  @param apiKey 游戏密钥
  *  @param ryAppId 热云运营ID
- *  @param secretKey 热云广告KEY
+ *  @param ryKey 热云广告KEY
  *  @param ryChannelID 渠道ID
  */
-- (void)mkInitWithSDKParameters:(int)gameId subGameId:(int)subGameId secretKey:(NSString *)secretKey
+- (void)mkInitWithSDKParameters:(int)gameId subGameId:(int)subGameId apiKey:(NSString *)apiKey
                         ryAppId:(NSString *)ryAppId ryKey:(NSString *)ryKey ryChannelID:(NSString *)ryChannelID
                         success:(void (^)(void))successBlock
                         failure:(void (^)(int errcode, NSString *errorMessage))errorBlock;
@@ -99,14 +99,14 @@ typedef void (^createOrderBlock)(MKPayCode payCode);
  *
  *  @param gameId    游戏编号
  *  @param subGameId 游戏子包
- *  @param secretKey 游戏密钥
+ *  @param apiKey 游戏密钥
  *  @param oldTime 出包时间戳
  *  @param webGameUrl 游戏链接
  *  @param ryAppId 热云运营ID
- *  @param secretKey 热云广告KEY
+ *  @param ryKey 热云广告KEY
  *  @param ryChannelID 渠道ID
  */
-- (void)mkInitWithSDKParameters:(int)gameId subGameId:(int)subGameId secretKey:(NSString *)secretKey
+- (void)mkInitWithSDKParameters:(int)gameId subGameId:(int)subGameId apiKey:(NSString *)apiKey
                         oldTime:(long)oldTime
                      webGameUrl:(NSString *)webGameUrl
                    webGameImage:(NSString *)imageName
