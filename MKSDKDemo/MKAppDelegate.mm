@@ -24,7 +24,6 @@
                                          ryAppId:@"459922aa8968c4a664a988df9749bcba" ryKey:@"c497a2997779e09ce454701e01b81a15" ryChannelID:@"unknown"
                                          success:^{
                                          } failure:^(int errcode, NSString *errorMessage) {
-                                             
                                              dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                                                  UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"初始化失败" delegate:self cancelButtonTitle:@"重试" otherButtonTitles:@"退出", nil];
                                                  [alertView show];
@@ -41,37 +40,7 @@
     [self.window setRootViewController:viewController];
     [self.window makeKeyAndVisible];
     [self initSDK];
-    
 
-    
-    //    NSString *imageName = @"111";    
-    //    [[MKSDK sharedXSSDK] mkInitWithSDKParameters:1 subGameId:1
-    //                                       secretKey:@"4f76c696869efaa7f84afe5a2d0de332"
-    //                                         oldTime:1505123978
-    //                                      webGameUrl:@"http://sda.4399.com/4399swf/upload_swf/ftp19/ssj/20160701/t3/index.html"
-    //                                    webGameImage:imageName
-    //                                         ryAppId:@"459922aa8968c4a664a988df9749bcba" ryKey:@"c497a2997779e09ce454701e01b81a15" ryChannelID:@"unknown"
-    //                                         success:^(BOOL isWebGame) {
-    //                                             if (isWebGame) {
-    //                                                 NSLog(@"WebGame");
-    //                                                 UIImage *image = [UIImage imageNamed:imageName];
-    //                                                 if (image) {
-    //                                                     MKGameImageViewController *gameImageViewController = [MKGameImageViewController new];
-    //                                                     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:gameImageViewController];
-    //                                                     [self.window setRootViewController:navigationController];
-    //                                                 }
-    //                                             }
-    //                                             else
-    //                                             {
-    //                                                 NSLog(@"NativeGame");
-    //                                                 ViewController *viewController = [ViewController new];
-    //                                                 [self.window setRootViewController:viewController];
-    //                                             }
-    //                                             [self.window makeKeyAndVisible];
-    //                                         } failure:^(int errcode, NSString *errorMessage) {
-    //
-    //
-    //    }];
     return YES;
 }
 
