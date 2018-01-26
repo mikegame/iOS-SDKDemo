@@ -31,14 +31,14 @@
 
 ```objective-c
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-// Override point for customization after application launch.
-    [[MKSDK sharedXSSDK] mkInitWithSDKParameters:1 subGameId:1 secretKey:@"4f76c696869efaa7f84afe5a2d0de332"
+
+    [[MKSDK sharedXSSDK] mkInitWithSDKParameters:1 subGameId:1secretKey:@"4f76c696869efaa7f84afe5a2d0de332"
     ryAppId:@"459922aa8968c4a664a988df9749bcba" ryKey:@"c497a2997779e09ce454701e01b81a15" ryChannelID:@"unknown"
     success:^{
     
     } failure:^(int errcode, NSString *errorMessage) {
 
-}];
+    }];
     return YES;
 }
 ```
