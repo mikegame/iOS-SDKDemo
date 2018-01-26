@@ -7,31 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		141565B51FBBE07600603192 /* MKSDK.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 141565B41FBBE07500603192 /* MKSDK.xcassets */; };
+		140D23B4201B23E0001E0291 /* MKSDK.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 140D23B3201B23E0001E0291 /* MKSDK.xcassets */; };
+		140EF7B7200E0E68007CBA1D /* MKSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A883921FA9AB120037734C /* MKSDK.framework */; };
+		140EF7B8200E0E68007CBA1D /* MKSDK.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 14A883921FA9AB120037734C /* MKSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		146FD0F61EEA55F60092FD23 /* MKAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 146FD0ED1EEA55F60092FD23 /* MKAppDelegate.mm */; };
 		146FD0F71EEA55F60092FD23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 146FD0EE1EEA55F60092FD23 /* Assets.xcassets */; };
 		146FD0FB1EEA55F60092FD23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 146FD0F31EEA55F60092FD23 /* main.m */; };
 		146FD0FC1EEA55F60092FD23 /* MKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 146FD0F51EEA55F60092FD23 /* MKViewController.m */; };
-		14A883941FA9AB140037734C /* MKSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A883921FA9AB120037734C /* MKSDK.framework */; };
-		14A883951FA9AB140037734C /* MKSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14A883921FA9AB120037734C /* MKSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		14A883961FA9AB140037734C /* Embed Frameworks */ = {
+		140EF7B6200E08CF007CBA1D /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				14A883951FA9AB140037734C /* MKSDK.framework in Embed Frameworks */,
+				140EF7B8200E0E68007CBA1D /* MKSDK.framework in Copy Files */,
 			);
-			name = "Embed Frameworks";
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		141565B41FBBE07500603192 /* MKSDK.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = MKSDK.xcassets; path = MKSDKDemo/Frameworks/MKSDK.xcassets; sourceTree = "<group>"; };
+		140D23B3201B23E0001E0291 /* MKSDK.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MKSDK.xcassets; sourceTree = "<group>"; };
 		142B44091EB03A77003EFFFC /* MKSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MKSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		146811351F55582A00039C2A /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		146811371F55583600039C2A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -56,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14A883941FA9AB140037734C /* MKSDK.framework in Frameworks */,
+				140EF7B7200E0E68007CBA1D /* MKSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,7 +66,6 @@
 		142B44001EB03A77003EFFFC = {
 			isa = PBXGroup;
 			children = (
-				141565B41FBBE07500603192 /* MKSDK.xcassets */,
 				146FD0EB1EEA55F60092FD23 /* MKSDKDemo */,
 				142B440A1EB03A77003EFFFC /* Products */,
 				146288AC1F398DF70088B948 /* Frameworks */,
@@ -114,6 +113,7 @@
 		146FD0EF1EEA55F60092FD23 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				140D23B3201B23E0001E0291 /* MKSDK.xcassets */,
 				14A883921FA9AB120037734C /* MKSDK.framework */,
 			);
 			path = Frameworks;
@@ -129,7 +129,7 @@
 				142B44051EB03A77003EFFFC /* Sources */,
 				142B44061EB03A77003EFFFC /* Frameworks */,
 				142B44071EB03A77003EFFFC /* Resources */,
-				14A883961FA9AB140037734C /* Embed Frameworks */,
+				140EF7B6200E08CF007CBA1D /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -152,7 +152,7 @@
 					142B44081EB03A77003EFFFC = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 8LY2B7683Z;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
 								enabled = 0;
@@ -184,7 +184,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				141565B51FBBE07600603192 /* MKSDK.xcassets in Resources */,
+				140D23B4201B23E0001E0291 /* MKSDK.xcassets in Resources */,
 				146FD0F71EEA55F60092FD23 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,6 +314,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: zhiwu yang (8LY2B7683Z)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 8LY2B7683Z;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -328,10 +329,10 @@
 					"$(PROJECT_DIR)/MKSDKDemo/Frameworks",
 				);
 				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mk.mksdkdemo34h;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mk.mksdkdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "b381d45d-fc96-4d19-b9e0-164ac5ea83ef";
+				PROVISIONING_PROFILE_SPECIFIER = demo_dev;
 			};
 			name = Debug;
 		};
@@ -342,6 +343,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: zhiwu yang (8LY2B7683Z)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 8LY2B7683Z;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -356,10 +358,10 @@
 					"$(PROJECT_DIR)/MKSDKDemo/Frameworks",
 				);
 				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mk.mksdkdemo34h;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mk.mksdkdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "b381d45d-fc96-4d19-b9e0-164ac5ea83ef";
+				PROVISIONING_PROFILE_SPECIFIER = demo_dev;
 			};
 			name = Release;
 		};

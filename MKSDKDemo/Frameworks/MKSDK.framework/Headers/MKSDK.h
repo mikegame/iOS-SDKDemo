@@ -10,7 +10,7 @@
 #import "MKOrder.h"
 #import "MKUser.h"
 #import "MKRole.h"
-#import "MKGameImageViewController.h"
+
 
 //! Project version number for MKSDK.
 FOUNDATION_EXPORT double MKSDKVersionNumber;
@@ -36,8 +36,8 @@ typedef NS_ENUM(NSInteger, MKLoginSuccessSource) {
 
 
 typedef void (^loginSuccessBlock)(MKUser *user, MKLoginSuccessSource loginSuccessSource);
-typedef void (^logoutBlock)();
-typedef void (^payViewCloseBlock)();
+typedef void (^logoutBlock)(void);
+typedef void (^payViewCloseBlock)(void);
 typedef void (^createOrderBlock)(MKPayCode payCode);
 
 @interface MKSDK : NSObject
@@ -83,9 +83,9 @@ typedef void (^createOrderBlock)(MKPayCode payCode);
  *
  *  @param gameId    游戏编号
  *  @param subGameId 游戏子包
- *  @param apiKey 游戏密钥
- *  @param ryAppId 热云运营ID
- *  @param ryKey 热云广告KEY
+ *  @param apiKey    游戏密钥
+ *  @param ryAppId   热云运营ID
+ *  @param ryKey     热云广告KEY
  *  @param ryChannelID 渠道ID
  */
 - (void)mkInitWithSDKParameters:(int)gameId subGameId:(int)subGameId apiKey:(NSString *)apiKey
