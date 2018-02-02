@@ -17,7 +17,13 @@
 2. 将 Frameworks 内的MKSDK.framework和MKSDK.xcassets添加(拖放)到你的工程目录中。
 <img src="https://github.com/mikegame/iOS-SDKDemo/blob/master/Snapshots/Framework.png"><br/>
 3. 在对应项目Targets下找到General。<br/>
-   在Deployment Info下支持Device Orientation游戏所支持Landscape Left、Landscape Right 2个方向。游戏需自行限制横屏还是竖屏。<br/>
+   在Deployment Info根据游戏需要，自行限制横屏还是竖屏。并且在AppDelegate入口限制方向<br/>
+   ```
+   - (NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
+   {
+       return UIInterfaceOrientationMaskPortrait;
+   }
+   ```
    并且在Embedded Binaries和Linked Frameworks and Libraries链接 frameworks:
 <img src="https://github.com/mikegame/iOS-SDKDemo/blob/master/Snapshots/FrameworkLink.png"><br/>
 
