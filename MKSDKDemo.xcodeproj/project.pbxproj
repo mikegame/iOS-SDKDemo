@@ -331,8 +331,8 @@
 				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mk.mksdkdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b381d45d-fc96-4d19-b9e0-164ac5ea83ef";
-				PROVISIONING_PROFILE_SPECIFIER = demo_dev;
+				PROVISIONING_PROFILE = "e0cdbfec-0a4e-4c45-af5d-afae21072c37";
+				PROVISIONING_PROFILE_SPECIFIER = dev_common;
 			};
 			name = Debug;
 		};
@@ -360,8 +360,8 @@
 				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mk.mksdkdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b381d45d-fc96-4d19-b9e0-164ac5ea83ef";
-				PROVISIONING_PROFILE_SPECIFIER = demo_dev;
+				PROVISIONING_PROFILE = "e0cdbfec-0a4e-4c45-af5d-afae21072c37";
+				PROVISIONING_PROFILE_SPECIFIER = dev_common;
 			};
 			name = Release;
 		};
