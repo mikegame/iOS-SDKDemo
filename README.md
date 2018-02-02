@@ -24,6 +24,7 @@
        return UIInterfaceOrientationMaskPortrait;
    }
    ```
+   勾选 Hide status bar 和requires full screen
    并且在Embedded Binaries和Linked Frameworks and Libraries链接 frameworks:
 <img src="https://github.com/mikegame/iOS-SDKDemo/blob/master/Snapshots/FrameworkLink.png"><br/>
 
