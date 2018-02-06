@@ -3,7 +3,9 @@
 [![Support](https://img.shields.io/badge/support-iOS%208%2B%20-blue.svg?style=flat)](https://www.apple.com/nl/ios/)&nbsp;
 
 
-点击查看更新日志(https://github.com/mikegame/iOS-SDKDemo/blob/master/MKSDKVerisonReadMe.txt)
+[![Support](111)](点击查看更新日志)&nbsp;
+
+This is [an example](https://github.com/mikegame/iOS-SDKDemo/blob/master/MKSDKVerisonReadMe.txt "Title") inline link.
 ==============
 
 演示项目
