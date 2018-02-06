@@ -3,7 +3,7 @@
 1.0.11 2017-02-06
 1、修复了初始化方法参数命名 
 ryAppId -> gameKey
-ryKey    -> trackKey
+ryKey   -> trackKey
 
 1.0.10 2017-02-02
 1、修复了支付页面显示位置不正确的问题
