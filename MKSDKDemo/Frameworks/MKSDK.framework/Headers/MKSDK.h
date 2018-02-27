@@ -12,6 +12,8 @@
 #import "MKRole.h"
 
 
+
+
 //! Project version number for MKSDK.
 FOUNDATION_EXPORT double MKSDKVersionNumber;
 
@@ -34,11 +36,19 @@ typedef NS_ENUM(NSInteger, MKLoginSuccessSource) {
     MKLoginSuccessByRegister   = 2,    //注册成功来源
 };
 
+typedef NS_ENUM(NSInteger, MKNetworkReachabilityStatus) {
+    MKNetworkReachabilityStatusUnknown          = -1,
+    MKNetworkReachabilityStatusNotReachable     = 0,
+    MKNetworkReachabilityStatusReachableViaWWAN = 1,
+    MKNetworkReachabilityStatusReachableViaWiFi = 2,
+};
+
 
 typedef void (^loginSuccessBlock)(MKUser *user, MKLoginSuccessSource loginSuccessSource);
 typedef void (^logoutBlock)(void);
 typedef void (^payViewCloseBlock)(void);
 typedef void (^createOrderBlock)(MKPayCode payCode);
+typedef void (^reachabilityStatusChangeBlock)(MKNetworkReachabilityStatus status);
 
 @interface MKSDK : NSObject
 
@@ -55,7 +65,10 @@ typedef void (^createOrderBlock)(MKPayCode payCode);
 /**
  *  游戏密钥
  */
-@property (nonatomic, readonly, strong) NSString *secretKey;
+@property (nonatomic, readonly, strong) NSString *apiKey;
+
+
+@property (nonatomic, strong) NSString *serverURL;
 
 /**
  *  登陆成功后当前用户信息
@@ -65,10 +78,11 @@ typedef void (^createOrderBlock)(MKPayCode payCode);
 @property (nonatomic, copy) logoutBlock logoutBlock;
 @property (nonatomic, copy) payViewCloseBlock payViewCloseBlock;
 @property (nonatomic, copy) createOrderBlock createOrderBlock;
+@property (nonatomic, copy) reachabilityStatusChangeBlock reachabilityStatusChangeBlock;
 /**
  *  获取XSSDK单例
  *
- *  @return XS  SDK单例对象
+ *  @return XSSDK单例对象
  */
 + (MKSDK *)sharedXSSDK;
 
@@ -83,9 +97,9 @@ typedef void (^createOrderBlock)(MKPayCode payCode);
  *
  *  @param gameId    游戏编号
  *  @param subGameId 游戏子包
- *  @param apiKey    游戏密钥
- *  @param gameKey   热云运营KEY
- *  @param trackKey  热云广告KEY
+ *  @param apiKey 游戏密钥
+ *  @param gameKey  热云运营KEY
+ *  @param trackKey 热云广告KEY
  *  @param ryChannelID 渠道ID
  */
 - (void)mkInitWithSDKParameters:(int)gameId subGameId:(int)subGameId apiKey:(NSString *)apiKey
@@ -94,25 +108,7 @@ typedef void (^createOrderBlock)(MKPayCode payCode);
                         failure:(void (^)(int errcode, NSString *errorMessage))errorBlock;
 
 
-/**
- *  初始化SDK
- *
- *  @param gameId    游戏编号
- *  @param subGameId 游戏子包
- *  @param apiKey 游戏密钥
- *  @param oldTime 出包时间戳
- *  @param webGameUrl 游戏链接
- *  @param gameKey  热云运营KEY
- *  @param trackKey 热云广告KEY
- *  @param ryChannelID 渠道ID
- */
-- (void)mkInitWithSDKParameters:(int)gameId subGameId:(int)subGameId apiKey:(NSString *)apiKey
-                        oldTime:(long)oldTime
-                     webGameUrl:(NSString *)webGameUrl
-                   webGameImage:(NSString *)imageName
-                        gameKey:(NSString *)gameKey trackKey:(NSString *)trackKey ryChannelID:(NSString *)ryChannelID
-                        success:(void (^)(BOOL isWebGame))successBlock
-                        failure:(void (^)(int errcode, NSString *errorMessage))errorBlock;
+
 
 /**
  *   用户登陆
@@ -168,7 +164,6 @@ typedef void (^createOrderBlock)(MKPayCode payCode);
  *  IAP支付回调
  */
 - (void)setCreateOrderBlock:(createOrderBlock)createOrderBlock;
-
 
 
 

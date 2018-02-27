@@ -55,9 +55,6 @@
  */
 @property (nonatomic, strong) NSString *customInfo;
 
-/**
- *  订单信息
- */
-@property (nonatomic, strong) NSString *orderInfo;
+
 
 @end

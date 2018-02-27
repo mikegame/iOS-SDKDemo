@@ -151,7 +151,7 @@
 				TargetAttributes = {
 					142B44081EB03A77003EFFFC = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 8LY2B7683Z;
+						DevelopmentTeam = V87F6X22SL;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
@@ -315,7 +315,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: zhiwu yang (8LY2B7683Z)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 8LY2B7683Z;
+				DEVELOPMENT_TEAM = V87F6X22SL;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -331,8 +331,8 @@
 				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mk.mksdkdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e0cdbfec-0a4e-4c45-af5d-afae21072c37";
-				PROVISIONING_PROFILE_SPECIFIER = dev_common;
+				PROVISIONING_PROFILE = "075c1e8d-e1d3-4db4-833a-27d50f3a787c";
+				PROVISIONING_PROFILE_SPECIFIER = "dev mksdk-com.mk.*";
 			};
 			name = Debug;
 		};
@@ -344,7 +344,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: zhiwu yang (8LY2B7683Z)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 8LY2B7683Z;
+				DEVELOPMENT_TEAM = V87F6X22SL;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -360,8 +360,8 @@
 				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mk.mksdkdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e0cdbfec-0a4e-4c45-af5d-afae21072c37";
-				PROVISIONING_PROFILE_SPECIFIER = dev_common;
+				PROVISIONING_PROFILE = "075c1e8d-e1d3-4db4-833a-27d50f3a787c";
+				PROVISIONING_PROFILE_SPECIFIER = "dev mksdk-com.mk.*";
 			};
 			name = Release;
 		};
