@@ -34,7 +34,6 @@
     [self.view addSubview:bgImageView];
     _bgImageView = bgImageView;
     
-    
     UIImage *buttonImage = [UIImage imageNamed:@"Button_Normal"];
     UIImage *buttonImageHighlighted = [UIImage imageNamed:@"Button_Highlighted"];
     UIButton *loginButton = [UIButton new];
@@ -117,8 +116,18 @@
         [[MKSDK sharedXSSDK] mkReportRole:role];
         
     }];
+}
+
+- (void)initButtonClick
+{
     
-    
+    [[MKSDK sharedXSSDK] mkInitWithSDKParameters:1 subGameId:1 apiKey:@"4f76c696869efaa7f84afe5a2d0de332"
+                                         gameKey:@"459922aa8968c4a664a988df9749bcba" trackKey:@"04e7406bd01299d05dd5528c459bb2f1" ryChannelID:@"unknown"
+                                         success:^{
+                                             NSLog(@"初始化成功");
+                                         } failure:^(int errcode, NSString *errorMessage) {
+                                             NSLog(@"初始化失败");
+                                         }];
 }
 
 
