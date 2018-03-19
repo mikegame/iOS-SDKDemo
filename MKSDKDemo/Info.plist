@@ -28,9 +28,9 @@
 		<true/>
 	</dict>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>需要获取您的相册权限</string>
+	<string>需要获取您的相册权限用以保存账号密码</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>需要获取您的相册权限</string>
+	<string>需要获取您的相册权限用以保存账号密码</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

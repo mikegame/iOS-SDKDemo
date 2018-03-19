@@ -179,42 +179,6 @@
 }
 
 
-//- (BOOL)shouldAutorotate
-//{
-//    return YES;
-//}
-//
-//
-//- (NSUInteger)supportedInterfaceOrientations
-//{
-//    return UIInterfaceOrientationMaskLandscape;
-//}
-//- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
-//{
-//    return UIInterfaceOrientationLandscapeLeft;
-//}
-
-
-
-//- (BOOL)shouldAutorotate
-//{
-//    return NO;
-//}
-
-//- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
-//{
-//    return UIInterfaceOrientationLandscapeLeft;
-//}
-
-
-//- (NSUInteger)supportedInterfaceOrientations
-//{
-//    return UIInterfaceOrientationMaskLandscape;
-//}
-
-
-
-
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
     [_bgImageView setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];

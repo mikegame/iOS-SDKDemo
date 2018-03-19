@@ -36,19 +36,14 @@ typedef NS_ENUM(NSInteger, MKLoginSuccessSource) {
     MKLoginSuccessByRegister   = 2,    //注册成功来源
 };
 
-typedef NS_ENUM(NSInteger, MKNetworkReachabilityStatus) {
-    MKNetworkReachabilityStatusUnknown          = -1,
-    MKNetworkReachabilityStatusNotReachable     = 0,
-    MKNetworkReachabilityStatusReachableViaWWAN = 1,
-    MKNetworkReachabilityStatusReachableViaWiFi = 2,
-};
+
 
 
 typedef void (^loginSuccessBlock)(MKUser *user, MKLoginSuccessSource loginSuccessSource);
 typedef void (^logoutBlock)(void);
 typedef void (^payViewCloseBlock)(void);
 typedef void (^createOrderBlock)(MKPayCode payCode);
-typedef void (^reachabilityStatusChangeBlock)(MKNetworkReachabilityStatus status);
+
 
 @interface MKSDK : NSObject
 
@@ -78,7 +73,7 @@ typedef void (^reachabilityStatusChangeBlock)(MKNetworkReachabilityStatus status
 @property (nonatomic, copy) logoutBlock logoutBlock;
 @property (nonatomic, copy) payViewCloseBlock payViewCloseBlock;
 @property (nonatomic, copy) createOrderBlock createOrderBlock;
-@property (nonatomic, copy) reachabilityStatusChangeBlock reachabilityStatusChangeBlock;
+
 /**
  *  获取XSSDK单例
  *
@@ -108,8 +103,6 @@ typedef void (^reachabilityStatusChangeBlock)(MKNetworkReachabilityStatus status
                         failure:(void (^)(int errcode, NSString *errorMessage))errorBlock;
 
 
-
-
 /**
  *   用户登陆
  *
@@ -136,7 +129,7 @@ typedef void (^reachabilityStatusChangeBlock)(MKNetworkReachabilityStatus status
 - (void)mkCenter;
 
 /**
- *  初始化SDK
+ *  上报角色
  *
  *  @param role    游戏角色
  */
